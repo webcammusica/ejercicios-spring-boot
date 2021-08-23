@@ -37,7 +37,6 @@ public class Country extends EntidadAuditable {
 
 	/**
 	 * constructor
-	 * 
 	 * @param name
 	 * @param population
 	 */
