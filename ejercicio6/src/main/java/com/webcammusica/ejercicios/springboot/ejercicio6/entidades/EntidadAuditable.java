@@ -16,7 +16,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
  * Entidad auditable de JPA
- * @author CARLOS DIAZ
+ * @author kumo
  *
  */
 @EntityListeners({ AuditingEntityListener.class })
