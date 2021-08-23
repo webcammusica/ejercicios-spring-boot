@@ -14,6 +14,11 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+/**
+ * Entidad auditable de JPA
+ * @author CARLOS DIAZ
+ *
+ */
 @EntityListeners({ AuditingEntityListener.class })
 @MappedSuperclass
 public class EntidadAuditable {
