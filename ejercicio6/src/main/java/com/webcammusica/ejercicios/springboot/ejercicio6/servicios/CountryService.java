@@ -1,7 +1,8 @@
 package com.webcammusica.ejercicios.springboot.ejercicio6.servicios;
 
 /**
- * Servicio intermediario con el repositorio
+ * Servicio intermediario entre el repositorio y la entidad
+ * la entidad y el repositorio también tienen relación directa
  * @author kumo
  */
 import java.util.List;
