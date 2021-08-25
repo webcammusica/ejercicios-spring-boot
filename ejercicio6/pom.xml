@@ -25,24 +25,59 @@
 
 	<dependencies>
 
+		<!-- permite usar anotaciones Jpa -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+		<!-- permite la conexión con el servidor mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+		<!-- Esta dependencia permite la validación de beans -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
+		<!-- Esta dependenica permite gestionar el pool de conexiones en el archivo 
+			/src/main/resources/application.properties -->
 		<dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
+		</dependency>
+
+		<!--Esta dependencia se agrega para renderizar las vistas JSP's, si se 
+			usa un motor de plantillas se debe incluir la dependencia correspondiente 
+			y excluir esta, incluye "spring-boot-starter-tomcat" -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!--Esta dependencia se agrega para poder utilizar el lenguaje JSTL en 
+			los JSP's -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- permite usar el compilador para JSP's -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- permite la recarga automática de la aplicación en Tomcat cuando hay 
+			cambios en los archivos incluidos en el classpath -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 	</dependencies>
