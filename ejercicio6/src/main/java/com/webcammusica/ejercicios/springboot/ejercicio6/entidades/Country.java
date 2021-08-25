@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "countries")
-public class Country extends EntidadAuditable {
+public class Country {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
