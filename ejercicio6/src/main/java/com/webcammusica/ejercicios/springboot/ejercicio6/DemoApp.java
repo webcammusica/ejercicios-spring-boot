@@ -35,6 +35,7 @@ public class DemoApp implements CommandLineRunner {
 
 	/**
 	 * selecciona todos los registros de "countries" usando el servicio
+	 * y muestra el proceso por consola usando slf4j
 	 * "countryService" conectado con "@autowired"
 	 */
 	@Override
