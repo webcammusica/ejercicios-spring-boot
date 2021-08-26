@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryService;
 
+
 /**
  * La anotación @SpringBootApplication aplica las funcionalidades proporcionadas
  * por @Configuration, @EnableAutoConfiguration, @ComponentScan y @EnableWebMvc
@@ -24,7 +25,7 @@ public class DemoApp implements CommandLineRunner {
 
 	@Autowired
 	CountryService countryService;
-
+	
 	/**
 	 * main
 	 * @param args
