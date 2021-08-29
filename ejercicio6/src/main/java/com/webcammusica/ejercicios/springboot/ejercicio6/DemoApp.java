@@ -7,8 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryService;
 
+import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryService;
 
 /**
  * La anotación @SpringBootApplication aplica las funcionalidades proporcionadas
@@ -19,15 +19,17 @@ import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryServic
  *
  */
 @SpringBootApplication
+
 public class DemoApp implements CommandLineRunner {
 
 	private static final Logger logger = LoggerFactory.getLogger(DemoApp.class);
 
 	@Autowired
 	CountryService countryService;
-	
+
 	/**
 	 * main
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -35,9 +37,8 @@ public class DemoApp implements CommandLineRunner {
 	}
 
 	/**
-	 * selecciona todos los registros de "countries" usando el servicio
-	 * y muestra el proceso por consola usando slf4j
-	 * "countryService" conectado con "@autowired"
+	 * selecciona todos los registros de "countries" usando el servicio y muestra el
+	 * proceso por consola usando slf4j "countryService" conectado con "@autowired"
 	 */
 	@Override
 	public void run(String... arg0) throws Exception {

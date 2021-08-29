@@ -49,7 +49,7 @@
  
     <footer class="footer">
       <div class="container">
-        <p class="text-muted"><a href="https://webcammusica.blogspot">webcam música</a></p>
+        <p class="text-muted"><a href="https://webcammusica.blogspot.com">webcam música</a></p>
       </div>
     </footer>
  
