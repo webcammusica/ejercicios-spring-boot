@@ -12,7 +12,7 @@
 	<artifactId>ejercicio3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>ejercicio3</name>
+	<name>ejercicio4</name>
 	<description>ejercicio similar al ejercicio 3 pero incluyendo uso básico de Lamdas, Streams y Tests.</description>
 	<properties>
 		<java.version>1.8</java.version>
