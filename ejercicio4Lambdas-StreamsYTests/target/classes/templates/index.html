@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spring Boot ejercicio 4</title>
+	<style>
+		html {
+			font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+			color: #404040;
+			background-color: #d3d3d3;
+		}
+
+		body {
+			padding: 5em;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>/ejercicio4/src/main/resources/templates/index.html</h1>
+	<p>
+		La fecha y hora actuales proporcionadas por
+		/ejercicio4/src/main/java/com/webcammusica/ejercicio4/controladores/Controlador1.java son: <span
+			th:text="${tstamp}"></span>
+	</p>
+</body>
+
+</html>
