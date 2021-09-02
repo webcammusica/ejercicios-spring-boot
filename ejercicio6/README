@@ -1,0 +1,19 @@
+Esta aplicación Spring creada con Spring Boot mediante el URL https://start.spring.io,
+por lo que tanto si se accede a este localizador de resolución única desde un navegador o desde
+Spring Tool Suite 4 o superior se recomienda tener acceso a Intenet. 
+
+Para usarlo:
+
+Desde Spring Tool Suite 4:
+
+1. Clonar el repositorio si no tienes el proyecto aún: "https://github.com/webcammusica/ejercicios-spring-boot".
+2. "File" --> "Import"... --> "Maven" --> "Existing Maven Projets".
+3. "Browse" --> selecciona la carpeta principal del proyecto. Ejemplo: F:\repositorios\github.com\ejercicios-spring-boot\ejercicio6.
+4. Clic en el botón "Finish".
+5. Espera a que el proyecto construya automáticamente, en la parte inferior derecha de Sprin Tool Suite
+aparece algo como "building...".
+6. Cuando finaliza los errores de compilación desaparecen, entonces clic derecho sobre el nombre del proyecto
+--> Run as --> Spring Boot App.
+7. Espera 30 segundo para estar seguro de que la apliación se desplegó completamente.
+8. Accede a través del navegador a "http://localhost:9090/countries/".
+
