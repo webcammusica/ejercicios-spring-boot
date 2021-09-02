@@ -29,4 +29,9 @@ incluyendo en el Body del archivo tipo JSON (en Postman usar opción botón de r
 	    "population": 79778000
 	}
 	"
+También puedes consultar un país por id accediendo a través de un navegador a por ejemplo:
+"http://localhost:9090/countries/api/country/2/".
+En este ejemplo la parte del URL que define esta clase es "/api/country" y la que define este
+el parámetro del metodo es "/2/". Es indispensable incluir el "/" al final.
 
+Si tienes alguna duda puedes escribirme a carlos.diazpenuela@outlook.com, trataré de responderte pronto.
