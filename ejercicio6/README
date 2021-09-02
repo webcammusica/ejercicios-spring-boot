@@ -35,3 +35,7 @@ En este ejemplo la parte del URL que definida en la clase es "/api/country" y la
 el parámetro del método es "/2/". Es indispensable incluir el "/" al final.
 
 Si tienes alguna duda puedes escribirme a carlos.diazpenuela@outlook.com, trataré de responderte pronto.
+
+Referencias:
+
+https://danielme.com/2018/02/21/tutorial-spring-boot-web-spring-data-jpa/
