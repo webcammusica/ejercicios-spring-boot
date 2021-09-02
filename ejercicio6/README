@@ -6,7 +6,8 @@ Para usarlo:
 
 Desde Spring Tool Suite 4:
 
-1. Clonar el repositorio si no tienes el proyecto aún: "https://github.com/webcammusica/ejercicios-spring-boot".
+1. Clonar el repositorio de ejercicios si no lo tienes aún:
+"https://github.com/webcammusica/ejercicios-spring-boot".
 2. "File" --> "Import"... --> "Maven" --> "Existing Maven Projets".
 3. "Browse" --> selecciona la carpeta principal del proyecto. Ejemplo: F:\repositorios\github.com\ejercicios-spring-boot\ejercicio6.
 4. Clic en el botón "Finish".
