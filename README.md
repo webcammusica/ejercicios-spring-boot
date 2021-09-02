@@ -12,6 +12,6 @@ mediante una plantilla Thymeleaf.
 ejercicio5: Usa @RestController, @RequestMapping para mostrar a través de un servicio Rest
 o microservicio un listado de hortalizas.
 
-ejercicio6: Usa @controller y dependencias para conectarse a un servidor de bases de datos
+ejercicio6: Usa @controller, @RestController y dependencias para conectarse a un servidor de bases de datos
 MySQL y mostrar la lista de países de una tabla de una base de datos. Muestra como
 cabiar el nombre de la aplicación y el puerto con el que se despliega en Spring.
