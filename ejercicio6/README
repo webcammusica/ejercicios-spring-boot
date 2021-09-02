@@ -18,3 +18,15 @@ aparece algo como "building...".
 7. Espera 30 segundo para estar seguro de que la aplicación se desplegó completamente.
 8. Accede a través del navegador a "http://localhost:9090/countries/".
 
+
+Puede agregar países mediante una solicitud REST POST con Postman u otro software a:
+"http://localhost:9090/países/api/country/".
+También funciona: "http://localhost:9090/países/api/country" sin "/" al final.
+incluyendo en el Body del archivo tipo JSON (en Postman usar opción botón de radio: "raw"): 
+	 "
+	 {
+	    "name": "Germany",
+	    "population": 79778000
+	}
+	"
+
