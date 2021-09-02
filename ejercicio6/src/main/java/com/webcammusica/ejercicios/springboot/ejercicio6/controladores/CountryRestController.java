@@ -48,8 +48,8 @@ public class CountryRestController {
 
 	/**
 	 * Ejemplo: "http://localhost:9090/countries/api/country/2/". En este ejemplo la
-	 * parte del URL que define esta clase es "/api/country" y la que define este
-	 * metodo es "/2/". Es indispensable incluir el "/" al final.
+	 * parte del URL que define esta clase es "/api/country" y la que define el parámetro
+	 * del método es "/2/". Es indispensable incluir el "/" al final.
 	 * 
 	 * @param id
 	 * @return
