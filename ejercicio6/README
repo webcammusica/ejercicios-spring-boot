@@ -19,7 +19,7 @@ aparece algo como "building...".
 8. Accede a través del navegador a "http://localhost:9090/countries/".
 
 
-Puede agregar países mediante una solicitud REST POST con Postman u otro software a:
+Puedes agregar países mediante una solicitud REST POST con Postman u otro software a:
 "http://localhost:9090/países/api/country/".
 También funciona: "http://localhost:9090/países/api/country" sin "/" al final.
 incluyendo en el Body del archivo tipo JSON (en Postman usar opción botón de radio: "raw"): 
@@ -31,7 +31,7 @@ incluyendo en el Body del archivo tipo JSON (en Postman usar opción botón de r
 	"
 También puedes consultar un país por id accediendo a través de un navegador a por ejemplo:
 "http://localhost:9090/countries/api/country/2/".
-En este ejemplo la parte del URL que define esta clase es "/api/country" y la que define
+En este ejemplo la parte del URL que definida en la clase es "/api/country" y la que define
 el parámetro del método es "/2/". Es indispensable incluir el "/" al final.
 
 Si tienes alguna duda puedes escribirme a carlos.diazpenuela@outlook.com, trataré de responderte pronto.
