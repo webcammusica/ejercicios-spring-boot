@@ -64,6 +64,7 @@ public class CountryRestController {
 	/**
 	 * Se debe usar una aplicación para el envío de peticiones REST como Postman.
 	 * Ejemplo: URL: "http://localhost:9090/países/api/country/".
+	 * También funciona: "http://localhost:9090/países/api/country" sin "/" al final.
 	 * Body de archivo tipo JSON (en Postman usar opción botón de radio: "raw"): 
 	 "
 	 {
