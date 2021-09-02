@@ -11,7 +11,7 @@ Desde Spring Tool Suite 4:
 2. "File" --> "Import"... --> "Maven" --> "Existing Maven Projets".
 3. "Browse" --> selecciona la carpeta principal del proyecto. Ejemplo: "F:\repositorios\github.com\ejercicios-spring-boot\ejercicio6".
 4. Clic en el botón "Finish".
-5. Espera a que el proyecto construya automáticamente, en la parte inferior derecha de Sprin Tool Suite
+5. Espera a que el proyecto construya automáticamente, en la parte inferior derecha de Spring Tool Suite
 aparece algo como "building...".
 6. Cuando finaliza los errores de compilación desaparecen, entonces clic derecho sobre el nombre del proyecto
 --> Run as --> Spring Boot App.
