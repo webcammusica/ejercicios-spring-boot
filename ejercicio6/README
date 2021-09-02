@@ -15,6 +15,6 @@ Desde Spring Tool Suite 4:
 aparece algo como "building...".
 6. Cuando finaliza los errores de compilación desaparecen, entonces clic derecho sobre el nombre del proyecto
 --> Run as --> Spring Boot App.
-7. Espera 30 segundo para estar seguro de que la apliación se desplegó completamente.
+7. Espera 30 segundo para estar seguro de que la aplicación se desplegó completamente.
 8. Accede a través del navegador a "http://localhost:9090/countries/".
 
