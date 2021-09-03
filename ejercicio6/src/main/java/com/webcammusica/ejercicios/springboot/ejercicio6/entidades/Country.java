@@ -12,16 +12,32 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "countries")
-public class Country extends EntidadAuditable{
+public class Country extends EntidadAuditable {
 
+	/**
+	 * Se declaran los campos que tiene la tabla que queremos que mapeé JPA, no
+	 * tienen porque ser todos.
+	 */
+
+	/**
+	 * @Id = llave primaria.
+	 * @GeneratedValue = una secuencia que puede generar Hibernate, como en este
+	 *                 caso o la base de datos.
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
+	/**
+	 * Campo no nulo y único.
+	 */
 	@Column(nullable = false, unique = true)
 	@NotNull
 	private String name;
 
+	/**
+	 * Campo no nulo, máximo dos mil millones, mínimo uno.
+	 */
 	@Column(nullable = false)
 	@NotNull
 	@Min(1)
@@ -37,6 +53,7 @@ public class Country extends EntidadAuditable{
 
 	/**
 	 * constructor
+	 * 
 	 * @param name
 	 * @param population
 	 */
@@ -46,6 +63,13 @@ public class Country extends EntidadAuditable{
 		this.population = population;
 	}
 
+	
+	/**
+	 * Getters y setters.
+	 * 
+	 */
+	
+	
 	public Long getId() {
 		return id;
 	}
