@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryService;
@@ -19,7 +20,7 @@ import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryServic
  *
  */
 @SpringBootApplication
-
+@EnableConfigurationProperties(CustomProperties.class)
 public class DemoApp extends SpringBootServletInitializer implements CommandLineRunner {
 
 	private static final Logger logger = LoggerFactory.getLogger(DemoApp.class);

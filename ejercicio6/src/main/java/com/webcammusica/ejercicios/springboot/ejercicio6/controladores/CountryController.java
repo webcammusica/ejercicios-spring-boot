@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.webcammusica.ejercicios.springboot.ejercicio6.CustomProperties;
+
 /**
  * La anotación @Controller indica que esta clase es un controlador
  * 
@@ -15,10 +19,15 @@ import com.webcammusica.ejercicios.springboot.ejercicio6.servicios.CountryServic
 @Controller
 public class CountryController {
 
+	private static final Logger logger = LoggerFactory.getLogger(CountryController.class);
+
 	private final CountryService countryService;
 
-	public CountryController(CountryService countryService) {
+	private final CustomProperties customProperties;
+
+	public CountryController(CountryService countryService, CustomProperties customProperties) {
 		this.countryService = countryService;
+		this.customProperties = customProperties;
 	}
 
 	/**
@@ -30,6 +39,7 @@ public class CountryController {
 	 */
 	@RequestMapping("/")
 	public String list(Model model) {
+		logger.info(customProperties.getValue());
 		model.addAttribute("countriesList", countryService.findAll());
 		return "countriesList";
 	}
