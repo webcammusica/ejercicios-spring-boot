@@ -1,6 +1,6 @@
 # ejercicios-spring-boot
 
-Por favor leer los archivos "README..." en cada proyecto.
+Por favor leer los archivos "README.md" / "README.txt" en cada proyecto.
 
 Aplicaciones básicas y un CRUD en el ejercicio 6.
 
