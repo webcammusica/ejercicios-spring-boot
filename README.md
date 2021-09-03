@@ -1,5 +1,8 @@
 # ejercicios-spring-boot
- aplicaciones básicas
+
+Por favor leer los archivos "README.md" / "README.txt" en cada proyecto.
+
+Aplicaciones básicas y un CRUD en el ejercicio 6.
 
 Los ejercicios 1 y 2 fueron  fallidas, esto es algo bueno para aprender.
 El ejercicio3 dió origen al ejercicio4. 
