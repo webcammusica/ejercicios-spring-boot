@@ -5,21 +5,35 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.webcammusica.ejercicios.springboot.ejercicio6.entidades.Country;
 import com.webcammusica.ejercicios.springboot.ejercicio6.repositorios.CountryRepository;
 
 /**
- * Servicio intermediario entre el repositorio y la entidad
- * la entidad y el repositorio también tienen relación directa.
- * Contiene la lógica de programación.
+ * Servicio intermediario entre el repositorio y la entidad la entidad y el
+ * repositorio también tienen relación directa. Contiene la lógica de
+ * programación.
+ * 
  * @author kumo
  */
 @Service
 public class CountryService {
 
-	private final CountryRepository countryRepository;
+	/**
+	 * La anotación @Autowired carga el bean en la aplicación Spring, inicializa el
+	 * atributo de la misma manera que lo haríamos en Java:
+	 * 
+	 * Como atributo: private final CountryRepository countryRepository;
+	 * 
+	 * Dentro del constructor: "this.countryRepository = countryRepository;"
+	 * 
+	 * Es decir inicializa.
+	 */
+
+	@Autowired
+	CountryRepository countryRepository;
 
 	/**
 	 * constructor
@@ -27,7 +41,7 @@ public class CountryService {
 	 * @param countryRepository
 	 */
 	public CountryService(CountryRepository countryRepository) {
-		this.countryRepository = countryRepository;
+
 	}
 
 	/**

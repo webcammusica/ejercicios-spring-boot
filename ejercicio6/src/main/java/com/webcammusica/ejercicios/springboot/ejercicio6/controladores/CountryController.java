@@ -1,5 +1,6 @@
 package com.webcammusica.ejercicios.springboot.ejercicio6.controladores;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,13 +22,22 @@ public class CountryController {
 
 	private static final Logger logger = LoggerFactory.getLogger(CountryController.class);
 
-	private final CountryService countryService;
+	//private final CountryService countryService;
+	@Autowired
+	private CountryService countryService;
 
-	private final CustomProperties customProperties;
+	//private final CustomProperties customProperties;
+	@Autowired
+	private CustomProperties customProperties;
 
+	/**
+	 * El uso de @Autowired ahorra la inicialización
+	 * @param countryService
+	 * @param customProperties
+	 */
 	public CountryController(CountryService countryService, CustomProperties customProperties) {
-		this.countryService = countryService;
-		this.customProperties = customProperties;
+		//this.countryService = countryService;
+		//this.customProperties = customProperties;
 	}
 
 	/**
