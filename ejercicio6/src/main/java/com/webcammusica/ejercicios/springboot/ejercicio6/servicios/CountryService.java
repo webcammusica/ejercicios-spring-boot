@@ -1,21 +1,21 @@
 package com.webcammusica.ejercicios.springboot.ejercicio6.servicios;
 
 import java.util.Collections;
-/**
- * Servicio intermediario entre el repositorio y la entidad
- * la entidad y el repositorio también tienen relación directa
- * @author kumo
- */
+
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
 import com.webcammusica.ejercicios.springboot.ejercicio6.entidades.Country;
 import com.webcammusica.ejercicios.springboot.ejercicio6.repositorios.CountryRepository;
 
+/**
+ * Servicio intermediario entre el repositorio y la entidad
+ * la entidad y el repositorio también tienen relación directa.
+ * Contiene la lógica de programación.
+ * @author kumo
+ */
 @Service
 public class CountryService {
 
@@ -31,8 +31,8 @@ public class CountryService {
 	}
 
 	/**
-	 * select * contiene un método de Java 8 para ordenar la lista por nombre usando
-	 * una expresión Lamda.
+	 * select * que además contiene un método de Java 8 para ordenar la lista por
+	 * nombre usando una expresión Lamda.
 	 * 
 	 * @return
 	 */
