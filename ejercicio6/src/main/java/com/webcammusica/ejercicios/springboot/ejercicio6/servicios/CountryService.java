@@ -1,5 +1,8 @@
 package com.webcammusica.ejercicios.springboot.ejercicio6.servicios;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Collections;
 
 import java.util.List;
@@ -73,5 +76,41 @@ public class CountryService {
 	public Long insert(Country country) {
 		country.setId(null);
 		return countryRepository.save(country).getId();
+	}
+
+	/**
+	 * update
+	 * Los campos no mapeados son actualizados con "null".
+	 * @param countryUpdate
+	 * @return mensaje de éxito o error de actualización
+	 */
+	public String partialUpdate(Country countryUpdate) {
+
+		Long id = countryUpdate.getId();
+		if (countryRepository.findById(id).isPresent()) {
+			Country updatedCountry = new Country();
+			updatedCountry.setId(countryUpdate.getId());
+			updatedCountry.setName(countryUpdate.getName());
+			updatedCountry.setPopulation(countryUpdate.getPopulation());
+			
+			agregarInfoAuditabe(updatedCountry);
+			
+			countryRepository.save(updatedCountry);
+			return "País con id: " + updatedCountry.getId() + ", actualizado correctamente";
+		}
+
+		return "El país con id: " + countryUpdate.getId() + " no existe.";
+	}
+	
+	
+
+	public Country agregarInfoAuditabe(Country country) {
+		
+		country.setCreateBy("carlos");
+		country.setCreatedDate(LocalDateTime.now());
+		country.setLastModifiedBy("carlos");
+		country.setLastModifiedDate(LocalDateTime.now());
+		
+		return country;
 	}
 }

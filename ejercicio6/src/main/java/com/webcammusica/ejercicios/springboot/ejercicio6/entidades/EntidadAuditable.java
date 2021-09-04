@@ -1,12 +1,11 @@
 package com.webcammusica.ejercicios.springboot.ejercicio6.entidades;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -16,6 +15,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
  * Entidad auditable de JPA
+ * @Temporal se usaba con las antiguas clases Date y Calendar.
  * @author kumo
  *
  */
@@ -24,14 +24,14 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class EntidadAuditable {
 
 	@CreatedDate
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
-	private Calendar createdDate;
+	private LocalDateTime createdDate;
 
 	@LastModifiedDate
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
-	private Calendar lastModifiedDate;
+	private LocalDateTime lastModifiedDate;
 
 	@CreatedBy
 	@Column(nullable = false)
@@ -40,19 +40,19 @@ public class EntidadAuditable {
 	@LastModifiedBy
 	private String lastModifiedBy;
 
-	public Calendar getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Calendar createdDate) {
+	public void setCreatedDate(LocalDateTime createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Calendar getLastModifiedDate() {
+	public LocalDateTime getLastModifiedDate() {
 		return lastModifiedDate;
 	}
 
-	public void setLastModifiedDate(Calendar lastModifiedDate) {
+	public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
 		this.lastModifiedDate = lastModifiedDate;
 	}
 

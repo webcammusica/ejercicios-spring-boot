@@ -3,6 +3,7 @@ package com.webcammusica.ejercicios.springboot.ejercicio6.controladores;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -86,4 +87,19 @@ public class CountryRestController {
 					HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
+	/**
+	 * Los campos no mapeados son actualizados con "null".
+	 * @param country
+	 * @return
+	 */
+	@PatchMapping(value = "/partialUpdate", produces = "application/json")
+	/*
+	 * @RequestMapping(value = "/customers/update", method = RequestMethod.PATCH, produces = "application/json")
+	 * es una anotación antigua que hacía lo mismo.
+	 */
+	public String updateCustomer(Country country) {
+		return countryService.partialUpdate(country);
+	}
+
 }
