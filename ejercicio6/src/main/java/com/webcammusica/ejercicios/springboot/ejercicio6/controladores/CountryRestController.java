@@ -50,8 +50,8 @@ public class CountryRestController {
 
 	/**
 	 * Ejemplo: "http://localhost:9090/countries/api/country/2/". En este ejemplo la
-	 * parte del URL que define esta clase es "/api/country" y la que define el parámetro
-	 * del método es "/2/". Es indispensable incluir el "/" al final.
+	 * parte del URL que define esta clase es "/api/country" y la que define el
+	 * parámetro del método es "/2/". Es indispensable incluir el "/" al final.
 	 * 
 	 * @param id
 	 * @return
@@ -65,15 +65,11 @@ public class CountryRestController {
 
 	/**
 	 * Se debe usar una aplicación para el envío de peticiones REST como Postman.
-	 * Ejemplo: URL: "http://localhost:9090/países/api/country/".
-	 * También funciona: "http://localhost:9090/países/api/country" sin "/" al final.
-	 * Body de archivo tipo JSON (en Postman usar opción botón de radio: "raw"): 
-	 "
-	 {
-	    "name": "Germany",
-	    "population": 79778000
-	}
-	"
+	 * Ejemplo: URL: "http://localhost:9090/países/api/country/". También funciona:
+	 * "http://localhost:9090/países/api/country" sin "/" al final. Body de archivo
+	 * tipo JSON (en Postman usar opción botón de radio: "raw"): " { "name":
+	 * "Germany", "population": 79778000 } "
+	 * 
 	 * @param country
 	 * @return
 	 */
@@ -88,37 +84,39 @@ public class CountryRestController {
 					HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
+
 	/**
 	 * Los campos no mapeados son actualizados con "null".
+	 * 
 	 * @param country
 	 * @return
 	 */
 	@PatchMapping(value = "/partialUpdate", produces = "application/json")
 	/*
-	 * @RequestMapping(value = "/customers/update", method = RequestMethod.PATCH, produces = "application/json")
-	 * es una anotación antigua que hacía lo mismo.
+	 * @RequestMapping(value = "/customers/update", method = RequestMethod.PATCH,
+	 * produces = "application/json") es una anotación antigua que hacía lo mismo.
 	 */
 	public String updateCustomer(Country country) {
 		return countryService.patchUpdate(country);
 	}
+
 	/*
-	 
-	 @DeleteMapping(value = "/delete/{id}/")
+	 * Este método requiere investigación para determinar la forma de la solicitud
+	 * desde Postman por ahora se usa @GetMapping en lugar de @DeleteMapping
+	 * 
+	 * @DeleteMapping(value = "/delete/{id}/") public ResponseEntity<Country>
+	 * deleteById(@PathVariable("id") Long id) { Optional<Country> country =
+	 * countryService.delete(id); return country.map(value -> new
+	 * ResponseEntity<>(value, HttpStatus.OK)) .orElseGet(() -> new
+	 * ResponseEntity<>(null, HttpStatus.NOT_FOUND)); }
+	 * 
+	 */
+
+	@GetMapping(value = "/delete/{id}/")
 	public ResponseEntity<Country> deleteById(@PathVariable("id") Long id) {
 		Optional<Country> country = countryService.delete(id);
 		return country.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
 				.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
 	}
-	 
-	 */
-	
-	 @GetMapping(value = "/delete/{id}/")
-		public ResponseEntity<Country> deleteById(@PathVariable("id") Long id) {
-			Optional<Country> country = countryService.delete(id);
-			return country.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-					.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
-		}
-		 
 
 }
