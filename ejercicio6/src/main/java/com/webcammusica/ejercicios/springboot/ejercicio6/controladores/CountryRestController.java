@@ -2,6 +2,7 @@ package com.webcammusica.ejercicios.springboot.ejercicio6.controladores;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -101,5 +102,23 @@ public class CountryRestController {
 	public String updateCustomer(Country country) {
 		return countryService.patchUpdate(country);
 	}
+	/*
+	 
+	 @DeleteMapping(value = "/delete/{id}/")
+	public ResponseEntity<Country> deleteById(@PathVariable("id") Long id) {
+		Optional<Country> country = countryService.delete(id);
+		return country.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+				.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+	}
+	 
+	 */
+	
+	 @GetMapping(value = "/delete/{id}/")
+		public ResponseEntity<Country> deleteById(@PathVariable("id") Long id) {
+			Optional<Country> country = countryService.delete(id);
+			return country.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+					.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+		}
+		 
 
 }

@@ -89,12 +89,17 @@ public class CountryService {
 
 		Long id = countryUpdate.getId();
 		if (countryRepository.findById(id).isPresent()) {
+
+			/*
+			 * El método "Optional.get()" retorna el objeto, en este caso "Country" o
+			 * "null".
+			 */
 			Country updatedCountry = countryRepository.findById(id).get();
 			updatedCountry.setId(countryUpdate.getId());
 			/*
 			 * La inicialización del la variable "updatedCountry" permite omitir campos
-			 * obligatorios en el update dado que se toman de dicha variable
-			 * updatedCountry.setName(countryUpdate.getName());
+			 * obligatorios en el update dado que se toman de dicha variable, por ejemplo
+			 * omitir el nombre "name:" updatedCountry.setName(countryUpdate.getName());
 			 */
 			updatedCountry.setPopulation(countryUpdate.getPopulation());
 
@@ -115,5 +120,20 @@ public class CountryService {
 		country.setLastModifiedDate(LocalDateTime.now());
 
 		return country;
+	}
+
+	/**
+	 * drop
+	 */
+	public Optional<Country> delete(Long id) {
+
+		Optional<Country> country = countryRepository.findById(id);
+	
+		if (country.isPresent()) {
+			countryRepository.delete(country.get());
+		}
+
+		return countryRepository.findById(id);
+
 	}
 }
