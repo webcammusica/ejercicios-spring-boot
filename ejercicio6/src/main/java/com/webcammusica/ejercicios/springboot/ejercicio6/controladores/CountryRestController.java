@@ -99,7 +99,7 @@ public class CountryRestController {
 	 * es una anotación antigua que hacía lo mismo.
 	 */
 	public String updateCustomer(Country country) {
-		return countryService.partialUpdate(country);
+		return countryService.patchUpdate(country);
 	}
 
 }

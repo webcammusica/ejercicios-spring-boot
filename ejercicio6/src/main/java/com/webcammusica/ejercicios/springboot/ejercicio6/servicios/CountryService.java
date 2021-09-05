@@ -84,13 +84,13 @@ public class CountryService {
 	 * @param countryUpdate
 	 * @return mensaje de éxito o error de actualización
 	 */
-	public String partialUpdate(Country countryUpdate) {
+	public String patchUpdate(Country countryUpdate) {
 
 		Long id = countryUpdate.getId();
 		if (countryRepository.findById(id).isPresent()) {
-			Country updatedCountry = new Country();
+			Country updatedCountry = countryRepository.findById(id).get();
 			updatedCountry.setId(countryUpdate.getId());
-			updatedCountry.setName(countryUpdate.getName());
+			//updatedCountry.setName(countryUpdate.getName());
 			updatedCountry.setPopulation(countryUpdate.getPopulation());
 			
 			agregarInfoAuditabe(updatedCountry);
