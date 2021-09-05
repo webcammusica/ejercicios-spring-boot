@@ -79,8 +79,9 @@ public class CountryService {
 	}
 
 	/**
-	 * update
-	 * Los campos no mapeados son actualizados con "null".
+	 * update Los campos no mapeados son actualizados con "null". La solicitud en
+	 * postman debe ser de tipo patch
+	 * 
 	 * @param countryUpdate
 	 * @return mensaje de éxito o error de actualización
 	 */
@@ -90,27 +91,29 @@ public class CountryService {
 		if (countryRepository.findById(id).isPresent()) {
 			Country updatedCountry = countryRepository.findById(id).get();
 			updatedCountry.setId(countryUpdate.getId());
-			//updatedCountry.setName(countryUpdate.getName());
+			/*
+			 * La inicialización del la variable "updatedCountry" permite omitir campos
+			 * obligatorios en el update dado que se toman de dicha variable
+			 * updatedCountry.setName(countryUpdate.getName());
+			 */
 			updatedCountry.setPopulation(countryUpdate.getPopulation());
-			
+
 			agregarInfoAuditabe(updatedCountry);
-			
+
 			countryRepository.save(updatedCountry);
 			return "País con id: " + updatedCountry.getId() + ", actualizado correctamente";
 		}
 
 		return "El país con id: " + countryUpdate.getId() + " no existe.";
 	}
-	
-	
 
 	public Country agregarInfoAuditabe(Country country) {
-		
+
 		country.setCreateBy("carlos");
 		country.setCreatedDate(LocalDateTime.now());
 		country.setLastModifiedBy("carlos");
 		country.setLastModifiedDate(LocalDateTime.now());
-		
+
 		return country;
 	}
 }
